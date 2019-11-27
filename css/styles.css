@@ -11,11 +11,12 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  cursor: pointer;
 }
 
 .slide-wrapper {
   overflow: hidden;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .slide {
@@ -43,4 +44,26 @@ img {
 .slide li.ativo {
   opacity: 1;
   transform: scale(1);
+}
+
+[data-control="slide"] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+[data-control="slide"] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #fb5;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+
+  text-indent: -999px;
+}
+
+[data-control="slide"] li.ativo a, [data-control="slide"] li a:hover {
+  background: #e54;
 }
